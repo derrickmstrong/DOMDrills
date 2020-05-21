@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
   const div = document.createElement('div');
   div.classList.add('header-container');
   const h1 = document.createElement('h1');
