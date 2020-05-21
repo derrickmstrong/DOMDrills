@@ -58,25 +58,25 @@ window.addEventListener('DOMContentLoaded', function () {
   h6.addEventListener('dblclick', randomColor);
 
   const button = document.querySelector('.btn');
-  
+
   button.addEventListener('click', addListItem);
-  
+
   function randomColor(e) {
     const int = Math.floor(Math.random() * Math.floor(8));
     e.target.style.color = colors[int];
   }
-  
+
   let num = 1;
   function addListItem() {
     const li = document.createElement('li');
     li.textContent = 'This is list item ' + num;
     num++;
     document.body.appendChild(li);
-    li.addEventListener('dblclick', removeItem)
+    li.addEventListener('dblclick', removeItem);
     li.addEventListener('click', randomColor);
   }
 
   function removeItem(e) {
-        e.target.remove();
-    }
+    e.target.remove();
+  }
 });
